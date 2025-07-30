@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.bg-impact-black {
+  background-color: #000000;
+}
+.text-impact-gold {
+  color: #ffd700;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}

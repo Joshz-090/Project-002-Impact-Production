@@ -1,0 +1,88 @@
+.faq-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: yellow;
+  background-image: linear-gradient(147deg, yellow 0%, #ffb625 74%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.151);
+  position: relative;
+}
+
+.faq-button:hover {
+  animation: jello-vertical 1s both;
+}
+
+.faq-button svg {
+  height: 1.5em;
+  fill: white;
+}
+
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -40px; /* Changed from top to bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  opacity: 0;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, yellow 0%, #ffb625 74%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #ffb625;
+  background-size: 1000%;
+  background-position: center;
+  transform: rotate(45deg);
+  top: -5px; /* Changed from bottom to top */
+  left: 50%;
+  margin-left: -5px; /* Center the arrow */
+  transition-duration: 0.3s;
+}
+
+.faq-button:hover .tooltip {
+  bottom: -45px; /* Changed from top to bottom */
+  opacity: 1;
+  transition-duration: 0.3s;
+}
