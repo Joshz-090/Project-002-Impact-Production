@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <basename="/Project-002-Impact-Production">
       <div className="app-container">
         <Header />
         <main className="main-content">
